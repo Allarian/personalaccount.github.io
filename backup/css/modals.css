@@ -1,0 +1,45 @@
+.popup_overlay{
+    position: fixed;
+    display: none;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0
+}
+.popup_overlay .box{
+    position: fixed;
+    margin-top: 15%
+}
+.popup_overlay h2{
+    border-bottom: 1px solid #0088cc
+}
+.popup_overlay .close{
+    font-size: 25px;
+    position: absolute;
+    opacity: .8;
+    top: -5px;
+    right: 5px;
+    text-decoration: none;
+    color: #000
+}
+.popup_overlay .close:hover{
+    opacity: .65;
+    color:#DB0024
+}
+.popup_overlay input[type="submit"],
+.popup_overlay input[type="reset"]{
+    font-size: 18px
+}
+#get_packs:target,
+#get_rate:target,
+#new_pers_acc_num:target,
+#refill_BS:target,
+#success:target,
+#change_pass:target,
+#forgot_pass:target{
+    display: block;
+    opacity: 1
+}

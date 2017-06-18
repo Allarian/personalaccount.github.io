@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/modals.css">
+	<title>Вход в Личный кабинет</title>
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="back_sign" id="main">
+	<header class="col-xs-12">
+		<img src="img/logo.png" id="logo">
+	</header>
+	<main class="col-xs-12">
+		<div class="row van_m_t">
+			<div class="col-lg-push-1 col-lg-5 col-md-6 col-md-push-3 sign_in">
+				<div class="sign_in_box">
+					<h3>Авторизация</h3>
+					<form method="get" action="user_page.php">
+						<div class="row flex_col">
+							<div class="flex_block">
+								<label for="login">Логин личного кабинета</label>
+								<input type="text" id="login" placeholder="Введите логин" required>
+								<p>В качестве логина для входа в личный кабинет используйте номер телефона или адрес электронной почты, указанные при регистарции.</p>
+							</div>
+							<div class="flex_block">
+								<label for="pass">Пароль</label>
+								<input type="password" id="pass" placeholder="Введите пароль" pattern="[A-Za-z0-9]{9,}" required>
+							</div>
+							<div class="flex_block">
+								<a href="#forgot_pass">Забыли пароль?</a><span id="wrong_data" class="hidden">Неверный логин и/или пароль</span>
+							</div>
+							<div class="flex_block">
+								<input type="submit" value="Войти" class="button button_submit" style="font-size:18px;">
+								<label style="padding-left:20px; font-weight:500"><input type="checkbox" id="remember">Запомнить меня</label>
+							</div>
+							<div class="flex_block">
+								<a href="registration.php">Зарегистрироваться в личном кабинете</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-push-2 col-lg-4 col-md-push-1 col-md-10 info_box">	
+				<p>ПАО «Ростелеком» – одна из крупнейших в России и Европе телекоммуникационных компаний национального масштаба, присутствующая во всех сегментах рынка услуг связи и охватывающая миллионы домохозяйств в России.
+			   	   Предоставляет услуги местной и дальней телефонной связи, широкополосного доступа в Интернет, интерактивного телевидения, сотовой связи и др.</p>
+				<p>Личный кабинет позволяет в удобное для Вас время управлять тарифным планом. Контролировать состояние Вашего личного счёта.
+			   	   А также даёт доступ к важной для Вас информации с любого компьютера и телефона. Кроме того Вы можете в любой момент проконсультироваться с работниками онлайн по интересующим Вас вопросам.</p>
+			</div>
+		</div>
+	</main>
+
+	<!--Modals-->
+	<div id="forgot_pass" class="popup_overlay hidden">
+		<div class="box col-lg-5 col-md-6 col-lg-push-3 col-md-push-3">
+			<a href="#close" class="close">&times</a>
+			<h2>Восстановление пароля</h2>
+			<form method="get" action="#change_pass">
+				<div class="row flex_col">
+					<div class="flex_block">
+						<label for="acc_number">Номер лицевого счёта</label>
+						<input type="text" id="acc_number" placeholder="Введите НЛС, подключенный к кабинету" required>
+					</div>
+					<div class="flex_block">
+						<label for="e-mail">Электронная почта</label>
+						<input type="text" id="e-mail" placeholder="e-mail" required>
+					</div>
+					<div class="flex_block">
+						<input type="submit" value="Продолжить" class="button button_submit">
+						<span id="wrong_data" class="hidden" style="font-size: 12px; vertical-align:top">e-mail не соответствует номеру лицевого счёта</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="change_pass" class="popup_overlay">
+		<div class="box col-lg-5 col-md-6 col-lg-push-3 col-md-push-3">
+			<a href="#close" class="close">&times</a>
+			<h2>Восстановление пароля</h2>
+			<form method="get" action="#success">
+				<div class="row flex_col">
+					<div class="flex_block">
+						<label for="new_pass">Новый пароль</label>
+						<input type="password" id="new_pass" placeholder="***" pattern="[A-Za-z0-9]{9,}" required>
+					</div>
+					<div class="flex_block">
+						<label for="rep_new_pass">Повторите новый пароль</label>
+						<input type="password" id="rep_new_pass" placeholder="***" pattern="[A-Za-z0-9]{9,}" required>
+					</div>
+					<div class="flex_block">
+						<input type="submit" value="Изменить" class="button button_submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="success" class="popup_overlay">
+		<div class="box col-lg-5 col-md-6 col-lg-push-3 col-md-push-3">
+			<a href="#close" class="close">&times</a>
+			<h2>Новый пароль успешно установлен</h2>
+			<button onclick="location.href='#close'" class="button button_submit center">ОК!</button>
+		</div>
+	</div>
+
+	<!--Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+
+</html>

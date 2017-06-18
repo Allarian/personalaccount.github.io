@@ -1,0 +1,90 @@
+.sprite_videorent{
+    background: url(../img/sprite_videorent_small.png) no-repeat;
+    margin-right: 10px; 
+    display: block;
+    float: left
+}
+.sprite_speed{
+    background: url(../img/sprite_speed.png) no-repeat;
+    margin-right: 10px;
+    display: block;
+    float: left
+}
+.sprite_icons{
+    background: url(../img/sprite_icons.png) no-repeat;
+    margin-right: 10px;
+    display: block;
+    float: left
+}
+.sprite_count_channels{
+    background: url(../img/sprite_count_channels.png) no-repeat;
+    position: relative;
+    left: 50%;
+    margin-left: -76px;
+    display: block
+}
+.small_1{
+    width: 62px;
+    height: 62px;
+    background-position: 0 0;
+}
+.small_2{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -62px;
+}
+.small_3{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -124px;
+}
+.small_4{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -186px;
+}
+.small_5{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -248px;
+}
+.small_6{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -310px;
+}
+.small_7{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -372px;
+}
+.small_8{
+    width: 62px;
+    height: 62px;
+    background-position: 0 -434px;
+}
+.large_1{
+    width: 152px;
+    height: 152px;
+    background-position: 0 0;
+}
+.large_2{
+    width: 152px;
+    height: 152px;
+    background-position: 0 -152px;
+}
+.large_3{
+    width: 152px;
+    height: 152px;
+    background-position: 0 -304px;
+}
+.large_4{
+    width: 152px;
+    height: 152px;
+    background-position: 0 -456px;
+}
+.large_5{
+    width: 152px;
+    height: 152px;
+    background-position: 0 -608px;
+}
